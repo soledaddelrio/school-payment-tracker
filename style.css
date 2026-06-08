@@ -313,3 +313,23 @@ body{
         font-size:32px;
     }
 }
+.payments-left-inside{
+    margin-top:35px;
+    background:#fff0f2;
+    border:2px solid #f0a7b3;
+    border-radius:14px;
+    text-align:center;
+    padding:18px;
+}
+
+.bottom-three-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+}
+
+@media(max-width:1000px){
+    .bottom-three-grid{
+        grid-template-columns:1fr;
+    }
+}
