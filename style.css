@@ -325,7 +325,7 @@ body{
 
 .bottom-three-grid{
     display:grid;
-    grid-template-columns:1.3fr 1.6fr .8fr;
+    grid-template-columns:1.2fr 1.8fr .7fr;
     gap:20px;
 }
 
