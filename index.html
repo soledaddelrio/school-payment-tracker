@@ -1,149 +1,186 @@
-```css
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Payment Tracker</title>
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f7fb;
-    color:#2d3748;
-    padding:30px;
-}
+<link rel="stylesheet" href="style.css">
+</head>
 
-.container{
-    max-width:1400px;
-    margin:auto;
-}
+<body>
 
-header{
-    margin-bottom:30px;
-}
+<div class="container">
 
-header h1{
-    margin-bottom:8px;
-}
+<header>
+    <h1>School Payment Tracker</h1>
+    <p>Smith Family • 2025-2026 School Year</p>
+</header>
 
-header p{
-    color:#64748b;
-}
+<div class="top-grid">
 
-.panel{
-    background:white;
-    border-radius:18px;
-    padding:24px;
-    box-shadow:0 2px 12px rgba(0,0,0,.08);
-}
+    <section class="panel summary">
+        <h2>Summary</h2>
 
-.top-grid{
-    display:grid;
-    grid-template-columns:1fr 1.3fr 1fr;
-    gap:20px;
-    margin-bottom:20px;
-}
+        <div class="summary-item">
+            <span>Total Due</span>
+            <strong>$18,550</strong>
+        </div>
 
-.children-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-    margin-bottom:20px;
-}
+        <div class="summary-item">
+            <span>Total Paid</span>
+            <strong>$11,150</strong>
+        </div>
 
-.summary{
-    background:#dceeff;
-}
+        <div class="summary-item">
+            <span>Remaining</span>
+            <strong>$7,400</strong>
+        </div>
 
-.todo{
-    background:#fff5d6;
-}
+        <div class="summary-item">
+            <span>Payments Left</span>
+            <strong>4</strong>
+        </div>
+    </section>
 
-.payment-form{
-    background:#e8f7e8;
-}
+    <section class="panel todo">
+        <h2>To Do List</h2>
 
-.summary-item{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:14px;
-}
+        <div class="todo-item">☐ Emma Payment 6 of 9</div>
+        <div class="todo-item">☐ Emma Payment 7 of 9</div>
+        <div class="todo-item">☐ Liam Payment 4 of 9</div>
+        <div class="todo-item">☐ Facility Fee</div>
+    </section>
 
-.summary-item strong{
-    font-size:18px;
-}
+    <section class="panel payment-form">
+        <h2>Record Payment</h2>
 
-.todo-item{
-    padding:10px 0;
-    border-bottom:1px solid rgba(0,0,0,.08);
-}
+        <input type="date">
 
-.payment-status{
-    padding:8px 0;
-}
+        <input type="number" placeholder="Amount">
 
-.done{
-    color:#15803d;
-}
+        <select>
+            <option>Tuition</option>
+            <option>Facility Fee</option>
+            <option>Other Fees</option>
+            <option>Trip Fee</option>
+        </select>
 
-.open{
-    color:#92400e;
-}
+        <input type="text" placeholder="Notes">
 
-.payment-form input,
-.payment-form select{
-    width:100%;
-    padding:12px;
-    margin-bottom:12px;
-    border:1px solid #d1d5db;
-    border-radius:10px;
-}
+        <button>Record Payment</button>
+    </section>
 
-.payment-form button{
-    width:100%;
-    border:none;
-    border-radius:10px;
-    background:#1e3a8a;
-    color:white;
-    padding:14px;
-    cursor:pointer;
-}
+</div>
 
-.child-card hr{
-    margin:16px 0;
-}
+<div class="children-grid">
 
-.split-section,
-.history,
-.instructions{
-    margin-top:20px;
-}
+    <section class="panel child-card">
 
-table{
-    width:100%;
-    border-collapse:collapse;
-}
+        <h2>Emma</h2>
 
-th,
-td{
-    padding:12px;
-    border-bottom:1px solid #e2e8f0;
-    text-align:left;
-}
+        <div class="payment-status done">✓ Payment 1</div>
+        <div class="payment-status done">✓ Payment 2</div>
+        <div class="payment-status done">✓ Payment 3</div>
+        <div class="payment-status done">✓ Payment 4</div>
+        <div class="payment-status done">✓ Payment 5</div>
 
-.instructions li{
-    margin-left:20px;
-    margin-bottom:10px;
-}
+        <div class="payment-status open">☐ Payment 6</div>
+        <div class="payment-status open">☐ Payment 7</div>
+        <div class="payment-status open">☐ Payment 8</div>
+        <div class="payment-status open">☐ Payment 9</div>
 
-@media (max-width:900px){
+        <hr>
 
-    .top-grid{
-        grid-template-columns:1fr;
-    }
+        <div class="payment-status done">✓ Facility Fee</div>
+        <div class="payment-status done">✓ Other Fees</div>
+        <div class="payment-status open">☐ Trip Fee</div>
 
-    .children-grid{
-        grid-template-columns:1fr;
-    }
+    </section>
 
-}
-```
+    <section class="panel child-card">
+
+        <h2>Liam</h2>
+
+        <div class="payment-status done">✓ Payment 1</div>
+        <div class="payment-status done">✓ Payment 2</div>
+        <div class="payment-status done">✓ Payment 3</div>
+
+        <div class="payment-status open">☐ Payment 4</div>
+        <div class="payment-status open">☐ Payment 5</div>
+        <div class="payment-status open">☐ Payment 6</div>
+        <div class="payment-status open">☐ Payment 7</div>
+        <div class="payment-status open">☐ Payment 8</div>
+        <div class="payment-status open">☐ Payment 9</div>
+
+        <hr>
+
+        <div class="payment-status done">✓ Facility Fee</div>
+        <div class="payment-status open">☐ Other Fees</div>
+        <div class="payment-status open">☐ Trip Fee</div>
+
+    </section>
+
+</div>
+
+<section class="panel split-section">
+    <h2>Payment Allocation</h2>
+
+    <p>
+        Tuition payments are automatically split between children based on
+        their annual tuition amounts.
+    </p>
+</section>
+
+<section class="panel history">
+
+    <h2>History</h2>
+
+    <table>
+
+        <tr>
+            <th>School Year</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>2022-2023</td>
+            <td>✓ Fully Paid</td>
+        </tr>
+
+        <tr>
+            <td>2023-2024</td>
+            <td>✓ Fully Paid</td>
+        </tr>
+
+        <tr>
+            <td>2024-2025</td>
+            <td>✓ Fully Paid</td>
+        </tr>
+
+        <tr>
+            <td>2025-2026</td>
+            <td>$7,400 Remaining</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<section class="panel instructions">
+
+    <h2>Instructions</h2>
+
+    <ol>
+        <li>Enter one payment per transaction.</li>
+        <li>Do not split payments by child.</li>
+        <li>The tracker allocates payments automatically.</li>
+        <li>Check the dashboard anytime for status.</li>
+    </ol>
+
+</section>
+
+</div>
+
+</body>
+</html>
