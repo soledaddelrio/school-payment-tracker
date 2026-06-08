@@ -400,3 +400,40 @@ body{
     margin-right:12px;
     vertical-align:middle;
 }
+
+.history-paid{
+    color:#2e9b3f;
+    font-weight:bold;
+}
+
+.current-year{
+    color:#2956c9;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.fee-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.fee-check{
+    width:22px;
+    height:22px;
+    border:1px solid #bdbdbd;
+    border-radius:4px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:white;
+}
+
+.paid-check{
+    background:#6dbb5e;
+    color:white;
+    border:none;
+    font-weight:bold;
+}
+
