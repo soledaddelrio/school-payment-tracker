@@ -55,7 +55,7 @@ body{
 
 .dashboard-grid{
     display:grid;
-    grid-template-columns:1fr 1.4fr 1fr;
+    grid-template-columns:1.3fr 1.8fr .7fr;
     gap:20px;
 }
 
@@ -438,3 +438,6 @@ body{
     font-weight:bold;
 }
 
+.applied-to{
+    white-space:nowrap;
+}
