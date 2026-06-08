@@ -243,7 +243,7 @@ body{
 }
 
 .progress-bar{
-    height:24px;
+    height:16px;
     background:#ececec;
     border-radius:20px;
     overflow:hidden;
@@ -266,6 +266,7 @@ body{
     margin-top:8px;
     font-weight:bold;
     color:#2d5fd1;
+    font-size:14px;
 }
 
 .instruction-grid{
@@ -324,7 +325,7 @@ body{
 
 .bottom-three-grid{
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:1.1fr 1.8fr .8fr;
     gap:20px;
 }
 
