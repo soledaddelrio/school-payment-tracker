@@ -333,3 +333,70 @@ body{
         grid-template-columns:1fr;
     }
 }
+
+.child-content{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+}
+
+.child-name{
+    font-size:32px;
+    font-weight:bold;
+}
+
+.child-subtitle{
+    font-size:16px;
+    margin-top:8px;
+}
+
+.payment-column{
+    padding:20px;
+}
+
+.payment-row{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:12px;
+}
+
+.paid-box{
+    width:28px;
+    height:28px;
+    background:#6dbb5e;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:4px;
+}
+
+.open-box{
+    width:28px;
+    height:28px;
+    border:1px solid #bbb;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:4px;
+}
+
+.fee-column{
+    padding:20px;
+    border-left:1px solid #e5e5e5;
+}
+
+.fee-column div{
+    margin-bottom:18px;
+}
+
+.todo-box{
+    display:inline-block;
+    width:22px;
+    height:22px;
+    border:2px solid #9a9a9a;
+    border-radius:4px;
+    margin-right:12px;
+    vertical-align:middle;
+}
