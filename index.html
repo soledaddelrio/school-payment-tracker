@@ -82,6 +82,7 @@ Emma Payment 6 of 9
         </div>
 
         <div class="todo-item">
+             <span class="todo-box"></span>
             Facility Fee
         </div>
 
@@ -155,9 +156,18 @@ Emma Payment 6 of 9
 
         <div class="fee-column">
 
-            <div>✓ Facility Fee - $300</div>
-            <div>✓ Other Fees - $150</div>
-            <div>☐ Trip Fee - $500</div>
+            <div><div class="fee-item">
+    <span class="fee-check paid-check">✓</span>
+    Facility Fee - $300
+</div></div>
+            <div><div class="fee-item">
+    <span class="fee-check paid-check">✓</span>
+    Other Fees - $150
+</div></div>
+            <div><div class="fee-item">
+    <span class="fee-check"></span>
+    Trip Fee - $500
+</div></div>
 
         </div>
 
@@ -238,28 +248,41 @@ Emma Payment 6 of 9
     <div>
         <div class="section-header">HISTORY</div>
         <div class="dashboard-card">
-            <table class="history-table">
-                <tr>
-                    <th>Year</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>2022-2023</td>
-                    <td>✓ Paid</td>
-                </tr>
-                <tr>
-                    <td>2023-2024</td>
-                    <td>✓ Paid</td>
-                </tr>
-                <tr>
-                    <td>2024-2025</td>
-                    <td>✓ Paid</td>
-                </tr>
-                <tr>
-                    <td>2025-2026</td>
-                    <td>$7,400 Left</td>
-                </tr>
-            </table>
+           <table class="history-table">
+
+<tr>
+    <th>Year</th>
+    <th>Total Due</th>
+    <th>Total Paid</th>
+    <th>Remaining</th>
+    <th>Status</th>
+</tr>
+
+<tr>
+    <td>2022-2023</td>
+    <td>$16,200</td>
+    <td>$16,200</td>
+    <td>$0</td>
+    <td class="history-paid">✓ Paid</td>
+</tr>
+
+<tr>
+    <td>2023-2024</td>
+    <td>$17,100</td>
+    <td>$17,100</td>
+    <td>$0</td>
+    <td class="history-paid">✓ Paid</td>
+</tr>
+
+<tr class="current-year">
+    <td>2025-2026</td>
+    <td>$18,550</td>
+    <td>$11,150</td>
+    <td>$7,400</td>
+    <td>In Progress</td>
+</tr>
+
+</table>
         </div>
     </div>
 
