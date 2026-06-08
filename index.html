@@ -12,52 +12,82 @@
 
 <div class="container">
 
-<header>
-    <h1>School Payment Tracker</h1>
-    <p>Smith Family • 2025-2026 School Year</p>
+<header class="dashboard-header">
+
+    <div>
+        <h1>School Payment Tracker</h1>
+        <p>Smith Family • 2025-2026 School Year</p>
+    </div>
+
+    <div class="school-year-selector">
+        <label>School Year</label>
+        <select>
+            <option>2025-2026</option>
+            <option>2024-2025</option>
+            <option>2023-2024</option>
+        </select>
+    </div>
+
 </header>
 
-<div class="top-grid">
+<div class="section-header">
+    MAIN DASHBOARD
+</div>
 
-    <section class="panel summary">
-        <h2>Summary</h2>
+<div class="dashboard-grid">
 
-        <div class="summary-item">
+    <div class="dashboard-card summary-card">
+
+        <h2>Family Summary</h2>
+
+        <div class="metric-row">
             <span>Total Due</span>
             <strong>$18,550</strong>
         </div>
 
-        <div class="summary-item">
+        <div class="metric-row">
             <span>Total Paid</span>
             <strong>$11,150</strong>
         </div>
 
-        <div class="summary-item">
+        <div class="metric-row">
             <span>Remaining</span>
             <strong>$7,400</strong>
         </div>
 
-        <div class="summary-item">
-            <span>Payments Left</span>
-            <strong>4</strong>
-        </div>
-    </section>
+    </div>
 
-    <section class="panel todo">
+    <div class="dashboard-card todo-card">
+
         <h2>To Do List</h2>
 
-        <div class="todo-item">☐ Emma Payment 6 of 9</div>
-        <div class="todo-item">☐ Emma Payment 7 of 9</div>
-        <div class="todo-item">☐ Liam Payment 4 of 9</div>
-        <div class="todo-item">☐ Facility Fee</div>
-    </section>
+        <div class="todo-item">
+            ☐ Emma Payment 6 of 9
+        </div>
 
-    <section class="panel payment-form">
+        <div class="todo-item">
+            ☐ Emma Payment 7 of 9
+        </div>
+
+        <div class="todo-item">
+            ☐ Liam Payment 4 of 9
+        </div>
+
+        <div class="todo-item">
+            ☐ Facility Fee
+        </div>
+
+    </div>
+
+    <div class="dashboard-card payment-card">
+
         <h2>Record Payment</h2>
 
         <input type="date">
 
-        <input type="number" placeholder="Amount">
+        <input
+            type="number"
+            placeholder="Amount">
 
         <select>
             <option>Tuition</option>
@@ -66,119 +96,103 @@
             <option>Trip Fee</option>
         </select>
 
-        <input type="text" placeholder="Notes">
+        <textarea
+            rows="3"
+            placeholder="Optional Notes"></textarea>
 
-        <button>Record Payment</button>
-    </section>
+        <button>
+            Record Payment
+        </button>
 
+        <div class="auto-note">
+            Payments are automatically allocated between children based on tuition percentages.
+        </div>
+
+    </div>
+
+</div>
+
+<div class="payments-left-card">
+
+    <div class="payments-left-label">
+        Payments Left
+    </div>
+
+    <div class="payments-left-number">
+        4
+    </div>
+
+</div>
+
+<div class="section-header">
+    CHILD PAYMENT CHECKLIST VIEW
 </div>
 
 <div class="children-grid">
 
-    <section class="panel child-card">
+    <div class="child-panel">
 
-        <h2>Emma</h2>
+        <div class="child-title child-purple">
+            Emma
+        </div>
 
-        <div class="payment-status done">✓ Payment 1</div>
-        <div class="payment-status done">✓ Payment 2</div>
-        <div class="payment-status done">✓ Payment 3</div>
-        <div class="payment-status done">✓ Payment 4</div>
-        <div class="payment-status done">✓ Payment 5</div>
+        <div class="payment-box-grid">
 
-        <div class="payment-status open">☐ Payment 6</div>
-        <div class="payment-status open">☐ Payment 7</div>
-        <div class="payment-status open">☐ Payment 8</div>
-        <div class="payment-status open">☐ Payment 9</div>
+            <div class="paid">1</div>
+            <div class="paid">2</div>
+            <div class="paid">3</div>
+            <div class="paid">4</div>
+            <div class="paid">5</div>
 
-        <hr>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
 
-        <div class="payment-status done">✓ Facility Fee</div>
-        <div class="payment-status done">✓ Other Fees</div>
-        <div class="payment-status open">☐ Trip Fee</div>
+        </div>
 
-    </section>
+        <div class="fee-list">
 
-    <section class="panel child-card">
+            <div>✓ Facility Fee</div>
+            <div>✓ Other Fees</div>
+            <div>☐ Trip Fee</div>
 
-        <h2>Liam</h2>
+        </div>
 
-        <div class="payment-status done">✓ Payment 1</div>
-        <div class="payment-status done">✓ Payment 2</div>
-        <div class="payment-status done">✓ Payment 3</div>
+    </div>
 
-        <div class="payment-status open">☐ Payment 4</div>
-        <div class="payment-status open">☐ Payment 5</div>
-        <div class="payment-status open">☐ Payment 6</div>
-        <div class="payment-status open">☐ Payment 7</div>
-        <div class="payment-status open">☐ Payment 8</div>
-        <div class="payment-status open">☐ Payment 9</div>
+    <div class="child-panel">
 
-        <hr>
+        <div class="child-title child-blue">
+            Liam
+        </div>
 
-        <div class="payment-status done">✓ Facility Fee</div>
-        <div class="payment-status open">☐ Other Fees</div>
-        <div class="payment-status open">☐ Trip Fee</div>
+        <div class="payment-box-grid">
 
-    </section>
+            <div class="paid">1</div>
+            <div class="paid">2</div>
+            <div class="paid">3</div>
+
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+
+        </div>
+
+        <div class="fee-list">
+
+            <div>✓ Facility Fee</div>
+            <div>☐ Other Fees</div>
+            <div>☐ Trip Fee</div>
+
+        </div>
+
+    </div>
 
 </div>
-
-<section class="panel split-section">
-    <h2>Payment Allocation</h2>
-
-    <p>
-        Tuition payments are automatically split between children based on
-        their annual tuition amounts.
-    </p>
-</section>
-
-<section class="panel history">
-
-    <h2>History</h2>
-
-    <table>
-
-        <tr>
-            <th>School Year</th>
-            <th>Status</th>
-        </tr>
-
-        <tr>
-            <td>2022-2023</td>
-            <td>✓ Fully Paid</td>
-        </tr>
-
-        <tr>
-            <td>2023-2024</td>
-            <td>✓ Fully Paid</td>
-        </tr>
-
-        <tr>
-            <td>2024-2025</td>
-            <td>✓ Fully Paid</td>
-        </tr>
-
-        <tr>
-            <td>2025-2026</td>
-            <td>$7,400 Remaining</td>
-        </tr>
-
-    </table>
-
-</section>
-
-<section class="panel instructions">
-
-    <h2>Instructions</h2>
-
-    <ol>
-        <li>Enter one payment per transaction.</li>
-        <li>Do not split payments by child.</li>
-        <li>The tracker allocates payments automatically.</li>
-        <li>Check the dashboard anytime for status.</li>
-    </ol>
-
-</section>
 
 </div>
 
