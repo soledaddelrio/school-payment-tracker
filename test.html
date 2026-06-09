@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="test()">Test Sheet</button>
+
+<script>
+
+async function test() {
+
+const url =
+'https://docs.google.com/spreadsheets/d/1iZ8KfdXtSHWQagoyJvR8Kl2qDO616zngKhYwMCQ5_0E/gviz/tq?tqx=out:json&sheet=DashboardData';
+
+const response = await fetch(url);
+
+const text = await response.text();
+
+console.log(text);
+
+alert("Check Console");
+
+}
+
+</script>
+
+</body>
+</html>
