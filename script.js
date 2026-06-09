@@ -23,6 +23,8 @@ async function loadDashboard() {
     metrics[row[0]] = row[1];
   });
 
+  console.log(metrics);
+  
   document.getElementById("familyName").textContent = metrics.FamilyName;
   document.getElementById("schoolYear").textContent = metrics.SchoolYear;
   document.getElementById("totalDue").textContent = formatMoney(metrics.TotalDue);
