@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
+<script src="script.js"></script>
+    
 <body>
 
 <div class="container">
@@ -16,7 +18,7 @@
 
     <div>
         <h1>School Payment Tracker</h1>
-        <p>Smith Family • 2025-2026 School Year</p>
+        <p><span id="familyName">Smith Family</span> • <span id="schoolYear">2025-2026</span> School Year</p>
     </div>
 
     <div class="school-year-selector">
@@ -42,22 +44,22 @@
 
         <div class="metric-row">
             <span>Total Due</span>
-            <strong>$18,550</strong>
+            <strong id="totalDue">$18,550</strong>
         </div>
 
         <div class="metric-row">
             <span>Total Paid</span>
-            <strong>$11,150</strong>
+            <strong id="totalPaid">$11,150</strong>
         </div>
 
         <div class="metric-row">
             <span>Remaining</span>
-            <strong>$7,400</strong>
+            <strong id="remaining">$7,400</strong>
         </div>
 
         <div class="payments-left-inside">
             <div class="payments-left-label">Payments Left</div>
-            <div class="payments-left-number">4</div>
+            <div class="payments-left-number" id="paymentsLeft">4</div>
         </div>
         
     </div>
