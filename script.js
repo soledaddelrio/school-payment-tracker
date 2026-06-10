@@ -23,7 +23,7 @@ async function loadDashboard() {
     metrics[row[0]] = row[1];
   });
 
-  console.log(metrics);
+ console.log(dashboardData);
   
   document.getElementById("familyName").textContent = metrics.FamilyName;
   document.getElementById("schoolYear").textContent = metrics.SchoolYear;
