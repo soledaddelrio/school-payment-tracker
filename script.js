@@ -9,6 +9,8 @@ async function fetchSheet(sheetName) {
     const json = JSON.parse(text.substring(47, text.length - 2));
     const rows = json.table.rows;
 
+    console.log("RAW ROWS", rows);
+
     return rows.map(row =>
         row.c.map(cell => cell ? cell.v : "")
     );
