@@ -13,10 +13,17 @@ async function fetchSheet(sheetName) {
   );
 }
 
-async function loadDashboard() {
+loadDashboard().catch(error => {
+    console.error("DASHBOARD ERROR:", error);
+}); 
+{
   const dashboardData = await fetchSheet("DashboardData");
   const todoData = await fetchSheet("Todo");
   const historyData = await fetchSheet("History");
+
+  console.log("dashboardData", dashboardData);
+console.log("todoData", todoData);
+console.log("historyData", historyData);
 
   const metrics = {};
   dashboardData.slice(1).forEach(row => {
