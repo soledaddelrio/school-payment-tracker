@@ -10,7 +10,7 @@ const json = JSON.parse(text.substring(47, text.length - 2));
 const rows = json.table.rows || [];
 
 return rows.map(row =>
-    row.c.map(cell => cell ? cell.v : "")
+    row.c.map(cell => cell ? (cell.f || cell.v || "") : "")
 );
 
 }
