@@ -54,6 +54,8 @@ const historyData = await fetchSheet("History");
 
 const metrics = {};
 
+    console.log("Dashboard rows:", dashboardData);
+
 dashboardData.forEach(row => {
 
     if (row[0]) {
