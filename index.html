@@ -4,18 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>School Payment Tracker</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
 
-<script src="script.js"></script>
-    
 <body>
 
 <div class="container">
 
 <header class="dashboard-header">
-
     <div>
         <h1>School Payment Tracker</h1>
         <p><span id="familyName">Smith Family</span> • <span id="schoolYear">2025-2026</span> School Year</p>
@@ -29,17 +25,13 @@
             <option>2023-2024</option>
         </select>
     </div>
-
 </header>
 
-<div class="section-header">
-    MAIN DASHBOARD
-</div>
+<div class="section-header">MAIN DASHBOARD</div>
 
 <div class="dashboard-grid">
 
     <div class="dashboard-card summary-card">
-
         <h2>Family Summary</h2>
 
         <div class="metric-row">
@@ -61,164 +53,95 @@
             <div class="payments-left-label">Payments Left</div>
             <div class="payments-left-number" id="paymentsLeft">4</div>
         </div>
-        
     </div>
 
     <div class="dashboard-card todo-card">
-
         <h2>To Do List</h2>
-
         <div id="todoList"></div>
-        
     </div>
 
     <div class="dashboard-card payment-card">
-
         <h2>Record Payment</h2>
 
-        <input type="date">
+        <input type="date" name="paymentDate">
+        <input type="number" name="paymentAmount" placeholder="Amount">
 
-        <input
-            type="number"
-            placeholder="Amount">
-
-        <select>
+        <select name="paymentCategory">
             <option>Tuition</option>
             <option>Facility Fee</option>
             <option>Other Fees</option>
             <option>Trip Fee</option>
         </select>
 
-        <textarea
-            rows="3"
-            placeholder="Optional Notes"></textarea>
+        <textarea name="paymentNotes" rows="3" placeholder="Optional Notes"></textarea>
 
-        <button>
-            Record Payment
-        </button>
+        <button type="button">Record Payment</button>
 
         <div class="auto-note">
             Payments are automatically allocated between children based on tuition percentages.
         </div>
-
     </div>
 
 </div>
 
-
-<div class="section-header">
-    CHILD PAYMENT CHECKLIST VIEW
-</div>
+<div class="section-header">CHILD PAYMENT CHECKLIST VIEW</div>
 
 <div class="children-grid">
 
     <div class="child-panel">
+        <div class="child-title child-purple">
+            <div class="child-name">Emma</div>
+            <div class="child-subtitle">Tuition: $9,000 • Plan: 9 Payments</div>
+        </div>
 
-    <div class="child-title child-purple">
-        <div class="child-name">Emma</div>
-        <div class="child-subtitle">
-            Tuition: $9,000 • Plan: 9 Payments
+        <div class="child-content">
+            <div class="payment-column">
+                <div class="payment-row"><span class="paid-box">1</span><span>9/1/24 - $1,000</span></div>
+                <div class="payment-row"><span class="paid-box">2</span><span>10/1/24 - $1,000</span></div>
+                <div class="payment-row"><span class="paid-box">3</span><span>11/1/24 - $1,000</span></div>
+                <div class="payment-row"><span class="paid-box">4</span><span>12/1/24 - $1,000</span></div>
+                <div class="payment-row"><span class="paid-box">5</span><span>1/1/25 - $1,000</span></div>
+                <div class="payment-row"><span class="open-box">6</span><span>2/1/25 - $1,000</span></div>
+                <div class="payment-row"><span class="open-box">7</span><span>3/1/25 - $1,000</span></div>
+                <div class="payment-row"><span class="open-box">8</span><span>4/1/25 - $1,000</span></div>
+                <div class="payment-row"><span class="open-box">9</span><span>5/1/25 - $1,000</span></div>
+            </div>
+
+            <div class="fee-column">
+                <div class="fee-item"><span class="fee-check paid-check">✓</span>Facility Fee - $300</div>
+                <div class="fee-item"><span class="fee-check paid-check">✓</span>Other Fees - $150</div>
+                <div class="fee-item"><span class="fee-check"></span>Trip Fee - $500</div>
+            </div>
         </div>
     </div>
-
-    <div class="child-content">
-
-        <div class="payment-column">
-
-            <div class="payment-row"><span class="paid-box">1</span><span>9/1/24 - $1,000</span></div>
-            <div class="payment-row"><span class="paid-box">2</span><span>10/1/24 - $1,000</span></div>
-            <div class="payment-row"><span class="paid-box">3</span><span>11/1/24 - $1,000</span></div>
-            <div class="payment-row"><span class="paid-box">4</span><span>12/1/24 - $1,000</span></div>
-            <div class="payment-row"><span class="paid-box">5</span><span>1/1/25 - $1,000</span></div>
-
-            <div class="payment-row"><span class="open-box">6</span><span>2/1/25 - $1,000</span></div>
-            <div class="payment-row"><span class="open-box">7</span><span>3/1/25 - $1,000</span></div>
-            <div class="payment-row"><span class="open-box">8</span><span>4/1/25 - $1,000</span></div>
-            <div class="payment-row"><span class="open-box">9</span><span>5/1/25 - $1,000</span></div>
-
-        </div>
-
-        <div class="fee-column">
-
-            <div>
-                <div class="fee-item">
-                <span class="fee-check paid-check">✓</span>
-                Facility Fee - $300
-                </div>
-            </div>
-            <div>
-                <div class="fee-item">
-                <span class="fee-check paid-check">✓</span>
-                Other Fees - $150
-                </div>
-            </div>
-            <div>
-                <div class="fee-item">
-                <span class="fee-check"></span>
-                Trip Fee - $500
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
 
     <div class="child-panel">
+        <div class="child-title child-blue">
+            <div class="child-name">Liam</div>
+            <div class="child-subtitle">Tuition: $9,000 • Plan: 9 Payments</div>
+        </div>
 
-    <div class="child-title child-purple">
-        <div class="child-name">Liam</div>
-        <div class="child-subtitle">
-            Tuition: $9,000 • Plan: 9 Payments
+        <div class="child-content">
+            <div class="payment-column">
+                <div class="payment-row"><span class="paid-box">1</span><span>9/1/24 - $1,000</span></div>
+                <div class="payment-row"><span class="paid-box">2</span><span>10/1/24 - $1,000</span></div>
+                <div class="payment-row"><span class="paid-box">3</span><span>11/1/24 - $1,000</span></div>
+                <div class="payment-row"><span class="paid-box">4</span><span>12/1/24 - $1,000</span></div>
+                <div class="payment-row"><span class="paid-box">5</span><span>1/1/25 - $1,000</span></div>
+                <div class="payment-row"><span class="open-box">6</span><span>2/1/25 - $1,000</span></div>
+                <div class="payment-row"><span class="open-box">7</span><span>3/1/25 - $1,000</span></div>
+                <div class="payment-row"><span class="open-box">8</span><span>4/1/25 - $1,000</span></div>
+                <div class="payment-row"><span class="open-box">9</span><span>5/1/25 - $1,000</span></div>
+            </div>
+
+            <div class="fee-column">
+                <div class="fee-item"><span class="fee-check paid-check">✓</span>Facility Fee - $300</div>
+                <div class="fee-item"><span class="fee-check paid-check">✓</span>Other Fees - $150</div>
+                <div class="fee-item"><span class="fee-check"></span>Trip Fee - $500</div>
+            </div>
         </div>
     </div>
 
-    <div class="child-content">
-
-        <div class="payment-column">
-
-            <div class="payment-row"><span class="paid-box">1</span><span>9/1/24 - $1,000</span></div>
-            <div class="payment-row"><span class="paid-box">2</span><span>10/1/24 - $1,000</span></div>
-            <div class="payment-row"><span class="paid-box">3</span><span>11/1/24 - $1,000</span></div>
-            <div class="payment-row"><span class="paid-box">4</span><span>12/1/24 - $1,000</span></div>
-            <div class="payment-row"><span class="paid-box">5</span><span>1/1/25 - $1,000</span></div>
-
-            <div class="payment-row"><span class="open-box">6</span><span>2/1/25 - $1,000</span></div>
-            <div class="payment-row"><span class="open-box">7</span><span>3/1/25 - $1,000</span></div>
-            <div class="payment-row"><span class="open-box">8</span><span>4/1/25 - $1,000</span></div>
-            <div class="payment-row"><span class="open-box">9</span><span>5/1/25 - $1,000</span></div>
-
-        </div>
-
-        <div class="fee-column">
-
-                        <div>
-                <div class="fee-item">
-                <span class="fee-check paid-check">✓</span>
-                Facility Fee - $300
-                </div>
-            </div>
-            <div>
-                <div class="fee-item">
-                <span class="fee-check paid-check">✓</span>
-                Other Fees - $150
-                </div>
-            </div>
-            <div>
-                <div class="fee-item">
-                <span class="fee-check"></span>
-                Trip Fee - $500
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-    
 </div>
 
 <div class="bottom-three-grid">
@@ -234,12 +157,12 @@
                 </tr>
                 <tr>
                     <td>$2,000.00</td>
-                    <td class="applied-to">Emma Tuition</td>
+                    <td class="applied-to">Emma&nbsp;Tuition</td>
                     <td>$857.14</td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td class="applied-to">Liam Tuition</td>
+                    <td class="applied-to">Liam&nbsp;Tuition</td>
                     <td>$1,142.86</td>
                 </tr>
                 <tr class="total-row">
@@ -253,19 +176,18 @@
     <div>
         <div class="section-header">HISTORY</div>
         <div class="dashboard-card">
-           <table class="history-table">
-
-<tr>
-    <th>Year</th>
-    <th>Total Due</th>
-    <th>Total Paid</th>
-    <th>Remaining</th>
-    <th>Status</th>
-</tr>
-
-<tbody id="historyBody"></tbody>
-               
-</table>
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Total Due</th>
+                        <th>Total Paid</th>
+                        <th>Remaining</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody"></tbody>
+            </table>
         </div>
     </div>
 
@@ -292,61 +214,32 @@
 
 </div>
 
-<div class="section-header">
-    INSTRUCTIONS
-</div>
+<div class="section-header">INSTRUCTIONS</div>
 
 <div class="instruction-grid">
-
     <div class="instruction-card">
-
-        <div class="instruction-number">
-            1
-        </div>
-
-        <p>
-            Enter one payment per transaction.
-        </p>
-
+        <div class="instruction-number">1</div>
+        <p>Enter one payment per transaction.</p>
     </div>
 
     <div class="instruction-card">
-
-        <div class="instruction-number">
-            2
-        </div>
-
-        <p>
-            Do not split payments by child.
-        </p>
-
+        <div class="instruction-number">2</div>
+        <p>Do not split payments by child.</p>
     </div>
 
     <div class="instruction-card">
-
-        <div class="instruction-number">
-            3
-        </div>
-
-        <p>
-            The tracker allocates payments automatically.
-        </p>
-
+        <div class="instruction-number">3</div>
+        <p>The tracker allocates payments automatically.</p>
     </div>
 
     <div class="instruction-card">
-
-        <div class="instruction-number">
-            4
-        </div>
-
-        <p>
-            Review the dashboard anytime for status.
-        </p>
-
-    </div>  
-    
+        <div class="instruction-number">4</div>
+        <p>Review the dashboard anytime for status.</p>
+    </div>
 </div>
 
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
