@@ -57,12 +57,14 @@ const metrics = {};
     console.log("Dashboard rows:", dashboardData);
 
 dashboardData.forEach(row => {
+    console.log("ROW:", row);
 
     if (row[0]) {
         metrics[String(row[0]).trim()] = row[1];
     }
-
 });
+
+console.log("METRICS:", metrics);
 
 setText("familyName", metrics.FamilyName || "Family");
 setText("schoolYear", metrics.SchoolYear || "");
