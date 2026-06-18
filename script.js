@@ -1,7 +1,7 @@
 const SHEET_ID = "1iZ8KfdXtSHWQagoyJvR8Kl2qDO616zngKhYwMCQ5_0E";
 
 async function fetchSheet(sheetName) {
-const url = https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(sheetName)};
+const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(sheetName)}`;
 
 const response = await fetch(url);
 const text = await response.text();
